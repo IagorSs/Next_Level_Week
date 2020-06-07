@@ -60,8 +60,8 @@ function handleSelectedItem(event) {
 
     const hasSelected = selectedItems.findIndex( (item) => item == itemId);
 
-    if (hasSelected >= 0) { // caso de já estar selecionado
-        const filteredItems = selectedItems.filter(item => item != itemId); //Itens com Id diferentes do itemId vão para o filteredItems
+    if (hasSelected >= 0) {
+        const filteredItems = selectedItems.filter(item => item != itemId);
         selectedItems = filteredItems;
     }
     else {

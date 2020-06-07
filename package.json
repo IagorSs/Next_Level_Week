@@ -1,21 +1,25 @@
 {
-  "name": "Next_Level_Week",
+  "name": "nlw",
   "version": "1.0.0",
   "description": "A explanatory website developed during the next level week event sponsored by rockseat",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IagorSs/Next_Level_Week.git"
   },
-  "author": "Mayk Brito",
+  "author": "Mayk Brito and Iagor Sousa",
   "bugs": {
     "url": "https://github.com/IagorSs/Next_Level_Week/issues"
   },
   "homepage": "https://github.com/IagorSs/Next_Level_Week#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
