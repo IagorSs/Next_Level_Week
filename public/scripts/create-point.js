@@ -13,11 +13,13 @@ populateUFs();
 
 function getCities(event) {
     const citySelect = document.querySelector("select[name=city]");
+    
+    // to return de correct value of UF in form
     const stateInput = document.querySelector("input[name=state]");
-
     const indexOfState = event.target.selectedIndex;
     stateInput.value = event.target.options[indexOfState].text;
 
+    // reset the value in citySelect.innerHTML while load the cities
     citySelect.innerHTML = `<option value>Carregando...</option>`;
     citySelect.disabled = true;
 
