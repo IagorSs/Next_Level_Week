@@ -3,7 +3,8 @@ const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("./src/database/database.db");
 
 module.exports = db;
-/*db.serialize(() => {
+
+db.serialize(() => {
     db.run(`
         CREATE TABLE IF NOT EXISTS places (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -38,16 +39,14 @@ module.exports = db;
         "Rio do Sul",
         "Papéis, Papelão"
     ]
-
-    function afterInsertData(err) {
+    
+    // For insert testData
+    /* db.run(query,values, (err) => {
         if(err) return console.log(err);
 
-        console.log("Cadastrado com sucesso");
-        console.log(this);
-    }
-    */
-    // For insert datas
-    //db.run(query,values, afterInsertData);
+        console.log("-- Dado de teste inserido com sucesso!! --");
+        console.log(this.values);
+    }); */
 
     // For consult datas
     /*db.all(`SELECT * FROM places`, function(err,rows) {
@@ -63,4 +62,4 @@ module.exports = db;
 
         console.log("Registro deletado com sucesso!");
     });*/
-//});
+});
